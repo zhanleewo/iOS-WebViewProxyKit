@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PcD-Pa-qYt">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLC-SM-l8W">
+                                        <rect key="frame" x="16" y="7" width="500" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="xOV-D0-pGh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRE-wV-t7c">
+                                        <rect key="frame" x="519" y="7" width="65" height="30"/>
+                                        <color key="backgroundColor" red="0.41960784309999999" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="g0M-Kh-pwN"/>
+                                            <constraint firstAttribute="height" constant="30" id="sx1-Uu-jnj"/>
+                                        </constraints>
+                                        <state key="normal" title="Go">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jCG-EE-MAy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2YJ-wv-Vdv"/>
+                                    <constraint firstItem="HRE-wV-t7c" firstAttribute="leading" secondItem="JLC-SM-l8W" secondAttribute="trailing" constant="3" id="9GU-Ca-Ild"/>
+                                    <constraint firstAttribute="trailing" secondItem="HRE-wV-t7c" secondAttribute="trailing" constant="16" id="IcT-gi-E4V"/>
+                                    <constraint firstItem="JLC-SM-l8W" firstAttribute="top" secondItem="PcD-Pa-qYt" secondAttribute="top" constant="7" id="fcB-w9-QTC"/>
+                                    <constraint firstItem="JLC-SM-l8W" firstAttribute="leading" secondItem="PcD-Pa-qYt" secondAttribute="leading" constant="16" id="qcC-qE-MjI"/>
+                                    <constraint firstItem="HRE-wV-t7c" firstAttribute="top" secondItem="PcD-Pa-qYt" secondAttribute="top" constant="7" id="sgm-Ny-XtI"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSb-r6-tqb">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uSb-r6-tqb" secondAttribute="bottom" id="7G4-1v-SpA"/>
+                            <constraint firstAttribute="trailing" secondItem="uSb-r6-tqb" secondAttribute="trailing" id="C2d-HY-1Xt"/>
+                            <constraint firstItem="PcD-Pa-qYt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="E25-WM-9L7"/>
+                            <constraint firstItem="PcD-Pa-qYt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IOt-VD-oGA"/>
+                            <constraint firstItem="uSb-r6-tqb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TTA-ag-AC4"/>
+                            <constraint firstItem="uSb-r6-tqb" firstAttribute="top" secondItem="PcD-Pa-qYt" secondAttribute="bottom" id="qNG-wX-0dz"/>
+                            <constraint firstAttribute="trailing" secondItem="PcD-Pa-qYt" secondAttribute="trailing" id="sJz-03-LQd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="urlTextfiled" destination="JLC-SM-l8W" id="BpP-jx-Ag5"/>
+                        <outlet property="webView" destination="uSb-r6-tqb" id="3Gl-KJ-KBQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
